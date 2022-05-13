@@ -1,4 +1,4 @@
-package Entity;
+package com.discente.LabProject.RevistaEngesoft.Entity;
 
 import java.math.BigInteger;
 import java.util.List;

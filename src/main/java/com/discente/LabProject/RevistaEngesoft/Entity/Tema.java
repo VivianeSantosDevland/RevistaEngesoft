@@ -1,4 +1,4 @@
-package Entity;
+package com.discente.LabProject.RevistaEngesoft.Entity;
 
 public class Tema {
     int id;
