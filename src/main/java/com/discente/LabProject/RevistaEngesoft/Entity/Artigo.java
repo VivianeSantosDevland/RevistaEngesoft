@@ -1,12 +1,29 @@
 package com.discente.LabProject.RevistaEngesoft.Entity;
 
+import com.sun.javafx.beans.IDProperty;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 import java.math.BigInteger;
 import java.util.List;
-
+import javax.persistence.*;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "table_artigo")
 public class Artigo {
-    List<Autor>autores;
-    String titulo;
-    String arquivoArtigo;
+    @Id
+    @GeneratedValue
+    @Column (name = "id_artigo")
     BigInteger id;
+    @Column (name = "titulo_artigo")
+    String titulo;
+    @Column (name = "arquivo_artigo")
+    String arquivoArtigo;
+@ManyToMany(mappedBy = "tb_autor", cascade = CascadeType.PERSIST)
+    List<Autor>autores;
 
 }

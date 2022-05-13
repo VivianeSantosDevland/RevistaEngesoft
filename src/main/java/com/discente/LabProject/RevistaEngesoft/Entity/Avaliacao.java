@@ -1,7 +1,9 @@
 package com.discente.LabProject.RevistaEngesoft.Entity;
 
+import java.math.BigInteger;
+
 public class Avaliacao {
-    //precisa referenciar o artigo
+    BigInteger id;
     int originalidade;
     int conteudo;
     int apresentacao;
