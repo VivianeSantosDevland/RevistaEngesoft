@@ -26,5 +26,5 @@ public class Artigo {
     String arquivoArtigo;
 @ManyToMany(mappedBy = "table_autor", cascade = CascadeType.PERSIST)
    private List<Autor>autores = new ArrayList<>();
-
+//um artigo é avaliado por três avaliadores.
 }
