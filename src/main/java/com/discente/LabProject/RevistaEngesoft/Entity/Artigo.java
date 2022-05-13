@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
 @Data
@@ -23,7 +24,7 @@ public class Artigo {
     String titulo;
     @Column (name = "arquivo_artigo")
     String arquivoArtigo;
-@ManyToMany(mappedBy = "tb_autor", cascade = CascadeType.PERSIST)
-    List<Autor>autores;
+@ManyToMany(mappedBy = "table_autor", cascade = CascadeType.PERSIST)
+   private List<Autor>autores = new ArrayList<>();
 
 }
